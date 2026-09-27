@@ -1,25 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
   <defs>
-    <clipPath id="r"><rect width="800" height="200" rx="16"/></clipPath>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0a0f"/><stop offset="100%" stop-color="#14141f"/>
+    <clipPath id="c-clip"><rect width="800" height="200" rx="16"/></clipPath>
+    <linearGradient id="c-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0f"/><stop offset="1" stop-color="#17130f"/>
     </linearGradient>
-    <filter id="b1"><feGaussianBlur stdDeviation="40"/></filter>
+    <radialGradient id="c-olive" cx="0.38" cy="0.32" r="0.75">
+      <stop offset="0" stop-color="#9aab45"/><stop offset="0.6" stop-color="#66772a"/><stop offset="1" stop-color="#3e4a18"/>
+    </radialGradient>
+    <filter id="c-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="c-shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
   </defs>
-  <g clip-path="url(#r)">
-    <rect width="800" height="200" fill="url(#bg)"/>
-    <ellipse cx="150" cy="180" rx="200" ry="120" fill="#009B3A" opacity="0.15" filter="url(#b1)"/>
-    <ellipse cx="650" cy="20" rx="200" ry="120" fill="#D5232A" opacity="0.1" filter="url(#b1)"/>
-    <rect width="800" height="2" fill="#009B3A" opacity="0.6"/>
-    <text x="400" y="75" text-anchor="middle" font-family="system-ui,sans-serif" font-size="36" fill="#fff" font-weight="700" letter-spacing="1">awesome-euskadi</text>
-    <rect x="310" y="86" width="180" height="2" rx="1" fill="#009B3A" opacity="0.5"/>
-    <text x="400" y="116" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="rgba(255,255,255,0.5)" font-weight="300" letter-spacing="3">SOFTWARE OPEN SOURCE PARA EUSKADI</text>
-    <!-- Lauburu: stylized Basque cross -->
-    <g fill="#FFFFFF" opacity="0.4" transform="translate(400,160)">
-      <path d="M0,-12 A6,6 0 0,1 6,-6 A6,6 0 0,0 0,0Z"/>
-      <path d="M12,0 A6,6 0 0,1 6,6 A6,6 0 0,0 0,0Z"/>
-      <path d="M0,12 A6,6 0 0,1 -6,6 A6,6 0 0,0 0,0Z"/>
-      <path d="M-12,0 A6,6 0 0,1 -6,-6 A6,6 0 0,0 0,0Z"/>
-    </g>
+  <g clip-path="url(#c-clip)">
+    <rect width="800" height="200" fill="url(#c-bg)"/>
+    <ellipse cx="110" cy="120" rx="190" ry="110" fill="#c98a3c" opacity="0.14" filter="url(#c-blur)"/>
+    <ellipse cx="690" cy="80" rx="190" ry="110" fill="#8a9a3a" opacity="0.12" filter="url(#c-blur)"/>
+    <g transform="translate(96,104) rotate(-16)"><g>
+      <path d="M-1.3,-92 L1.3,-92 L1.3,74 L0,84 L-1.3,74Z" fill="#dcc193"/>
+      <ellipse cx="0" cy="-70" rx="12" ry="15" fill="url(#c-olive)"/>
+      <ellipse cx="-4" cy="-76" rx="3" ry="5" fill="#ffffff" opacity="0.25"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#4a2c1f" stroke-width="12.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#9a5f45" stroke-width="9.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#c7bfb6" stroke-width="3" stroke-linecap="round" transform="translate(-1.5,-2.5)" opacity="0.85"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#6b3b2a" stroke-width="1" stroke-linecap="round" transform="translate(1,1.5)" opacity="0.8"/>
+      <g transform="rotate(-14 0 6)"><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#b7b34f" stroke-width="5.6" stroke-linecap="round"/><path d="M-12,27 C-5,3 -1,2 2,3" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <g transform="rotate(12 0 14)"><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#c9c563" stroke-width="5.6" stroke-linecap="round"/><path d="M-13,34 C-5,11 -1,10 2,11" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <ellipse cx="0" cy="60" rx="10.5" ry="13" fill="url(#c-olive)"/>
+      <ellipse cx="-3.5" cy="55" rx="2.6" ry="4.4" fill="#ffffff" opacity="0.22"/>
+    </g></g>
+    <g transform="translate(150,112) rotate(9) scale(0.86)"><g>
+      <path d="M-1.3,-92 L1.3,-92 L1.3,74 L0,84 L-1.3,74Z" fill="#dcc193"/>
+      <ellipse cx="0" cy="-70" rx="12" ry="15" fill="url(#c-olive)"/>
+      <ellipse cx="-4" cy="-76" rx="3" ry="5" fill="#ffffff" opacity="0.25"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#4a2c1f" stroke-width="12.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#9a5f45" stroke-width="9.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#c7bfb6" stroke-width="3" stroke-linecap="round" transform="translate(-1.5,-2.5)" opacity="0.85"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#6b3b2a" stroke-width="1" stroke-linecap="round" transform="translate(1,1.5)" opacity="0.8"/>
+      <g transform="rotate(-14 0 6)"><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#b7b34f" stroke-width="5.6" stroke-linecap="round"/><path d="M-12,27 C-5,3 -1,2 2,3" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <g transform="rotate(12 0 14)"><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#c9c563" stroke-width="5.6" stroke-linecap="round"/><path d="M-13,34 C-5,11 -1,10 2,11" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <ellipse cx="0" cy="60" rx="10.5" ry="13" fill="url(#c-olive)"/>
+      <ellipse cx="-3.5" cy="55" rx="2.6" ry="4.4" fill="#ffffff" opacity="0.22"/>
+    </g></g>
+    <g transform="translate(652,110) rotate(-8) scale(0.86)"><g>
+      <path d="M-1.3,-92 L1.3,-92 L1.3,74 L0,84 L-1.3,74Z" fill="#dcc193"/>
+      <ellipse cx="0" cy="-70" rx="12" ry="15" fill="url(#c-olive)"/>
+      <ellipse cx="-4" cy="-76" rx="3" ry="5" fill="#ffffff" opacity="0.25"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#4a2c1f" stroke-width="12.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#9a5f45" stroke-width="9.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#c7bfb6" stroke-width="3" stroke-linecap="round" transform="translate(-1.5,-2.5)" opacity="0.85"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#6b3b2a" stroke-width="1" stroke-linecap="round" transform="translate(1,1.5)" opacity="0.8"/>
+      <g transform="rotate(-14 0 6)"><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#b7b34f" stroke-width="5.6" stroke-linecap="round"/><path d="M-12,27 C-5,3 -1,2 2,3" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <g transform="rotate(12 0 14)"><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#c9c563" stroke-width="5.6" stroke-linecap="round"/><path d="M-13,34 C-5,11 -1,10 2,11" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <ellipse cx="0" cy="60" rx="10.5" ry="13" fill="url(#c-olive)"/>
+      <ellipse cx="-3.5" cy="55" rx="2.6" ry="4.4" fill="#ffffff" opacity="0.22"/>
+    </g></g>
+    <g transform="translate(706,102) rotate(15)"><g>
+      <path d="M-1.3,-92 L1.3,-92 L1.3,74 L0,84 L-1.3,74Z" fill="#dcc193"/>
+      <ellipse cx="0" cy="-70" rx="12" ry="15" fill="url(#c-olive)"/>
+      <ellipse cx="-4" cy="-76" rx="3" ry="5" fill="#ffffff" opacity="0.25"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#4a2c1f" stroke-width="12.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#9a5f45" stroke-width="9.5" stroke-linecap="round"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#c7bfb6" stroke-width="3" stroke-linecap="round" transform="translate(-1.5,-2.5)" opacity="0.85"/>
+      <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#6b3b2a" stroke-width="1" stroke-linecap="round" transform="translate(1,1.5)" opacity="0.8"/>
+      <g transform="rotate(-14 0 6)"><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#b7b34f" stroke-width="5.6" stroke-linecap="round"/><path d="M-12,27 C-5,3 -1,2 2,3" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <g transform="rotate(12 0 14)"><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#c9c563" stroke-width="5.6" stroke-linecap="round"/><path d="M-13,34 C-5,11 -1,10 2,11" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+      <ellipse cx="0" cy="60" rx="10.5" ry="13" fill="url(#c-olive)"/>
+      <ellipse cx="-3.5" cy="55" rx="2.6" ry="4.4" fill="#ffffff" opacity="0.22"/>
+    </g></g>
+    <text x="400" y="96" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#ffffff" font-weight="700" letter-spacing="1">awesome-euskadi</text>
+    <rect x="340" y="108" width="120" height="2" rx="1" fill="#b8b047" opacity="0.8"/>
+    <text x="400" y="132" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.62" font-weight="400" letter-spacing="2.6">SOFTWARE OPEN SOURCE PARA EUSKADI</text>
   </g>
 </svg>
