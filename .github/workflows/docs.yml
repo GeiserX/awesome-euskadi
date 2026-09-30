@@ -94,7 +94,22 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      # The concurrency lock orders runs by when they reach the group, not by
+      # push time, so a late run could publish an older commit over a newer
+      # one. Deploy only if this commit is still the head of its branch.
+      - name: Check this commit is still the branch head
+        id: fresh
+        run: |
+          head=$(git ls-remote "https://github.com/${GITHUB_REPOSITORY}.git" "refs/heads/${GITHUB_REF_NAME}" | cut -f1)
+          if [ "$head" = "$GITHUB_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Skipping deploy: ${GITHUB_REF_NAME} is at ${head:-unknown}, this run built ${GITHUB_SHA}."
+          fi
+
+      - if: steps.fresh.outputs.current == 'true'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
       - id: deployment
+        if: steps.fresh.outputs.current == 'true'
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
