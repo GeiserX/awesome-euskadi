@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="256" height="256" role="img" aria-label="Awesome Euskadi">
+  <!-- The gilda of logo.svg on a plate in the banner's darkest sky colour, with
+       the banner's own amber glow (#c98a3c, blurred) behind it, so the favicon
+       reads on a light tab bar. Same elements as logo.svg, scaled 1.7. -->
+  <defs>
+    <radialGradient id="aw-olive" cx="0.38" cy="0.32" r="0.75">
+      <stop offset="0" stop-color="#9aab45"/><stop offset="0.6" stop-color="#66772a"/><stop offset="1" stop-color="#3e4a18"/>
+    </radialGradient>
+    <clipPath id="aw-plate"><rect width="360" height="360" rx="72"/></clipPath>
+    <filter id="aw-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+  <rect width="360" height="360" rx="72" fill="#0a0a0f"/>
+  <g clip-path="url(#aw-plate)">
+    <ellipse cx="180" cy="180" rx="150" ry="130" fill="#c98a3c" opacity="0.14" filter="url(#aw-blur)"/>
+  </g>
+  <g transform="translate(179.15 187.1) scale(1.7)">
+      <g transform="rotate(40 0 -4)">
+        <path d="M-3,-92 L3,-92 L3,74 L0,86 L-3,74Z" fill="#dcc193"/>
+        <ellipse cx="0" cy="-70" rx="12" ry="15" fill="url(#aw-olive)"/>
+        <ellipse cx="-4" cy="-76" rx="3" ry="5" fill="#ffffff" opacity="0.25"/>
+        <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#4a2c1f" stroke-width="12.5" stroke-linecap="round"/>
+        <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#9a5f45" stroke-width="9.5" stroke-linecap="round"/>
+        <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#c7bfb6" stroke-width="3" stroke-linecap="round" transform="translate(-1.5,-2.5)" opacity="0.85"/>
+        <path d="M-15,-50 C11,-48 14,-35 0,-31 C-14,-27 -14,-14 5,-10" fill="none" stroke="#6b3b2a" stroke-width="1" stroke-linecap="round" transform="translate(1,1.5)" opacity="0.8"/>
+        <g transform="rotate(-14 0 6)"><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-15,32 C-4,-1 4,-1 13,29" fill="none" stroke="#b7b34f" stroke-width="5.6" stroke-linecap="round"/><path d="M-12,27 C-5,3 -1,2 2,3" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+        <g transform="rotate(12 0 14)"><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#5e5a1e" stroke-width="8" stroke-linecap="round"/><path d="M-16,39 C-4,7 4,7 14,36" fill="none" stroke="#c9c563" stroke-width="5.6" stroke-linecap="round"/><path d="M-13,34 C-5,11 -1,10 2,11" fill="none" stroke="#eee8a8" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></g>
+        <ellipse cx="0" cy="60" rx="10.5" ry="13" fill="url(#aw-olive)"/>
+        <ellipse cx="-3.5" cy="55" rx="2.6" ry="4.4" fill="#ffffff" opacity="0.22"/>
+      </g>
+  </g>
+</svg>
