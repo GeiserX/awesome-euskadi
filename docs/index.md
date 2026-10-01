@@ -27,13 +27,13 @@ hide:
 
     ---
 
-    De Cultura e Idioma a Universidad, pasando por EuskoJ, UPV/EHU, Bilbao, HiTZ. El índice lateral sigue la categoría que estás leyendo.
+    De Cultura e Idioma a Universidad, pasando por Open Data Euskadi, UPV/EHU, Bilbao, HiTZ. El índice lateral sigue la categoría que estás leyendo.
 
--   :material-magnify: **[Buscar un proyecto](https://geiserx.github.io/awesome-euskadi/?q=EuskoJ)**
+-   :material-magnify: **[Buscar un proyecto](https://geiserx.github.io/awesome-euskadi/?q=Open%20Data%20Euskadi)**
 
     ---
 
-    Pulsa `/` y escribe lo que necesitas: EuskoJ, UPV/EHU, Bilbao, HiTZ. La búsqueda cubre el nombre y la descripción de todas las entradas.
+    Pulsa `/` y escribe lo que necesitas: Open Data Euskadi, UPV/EHU, Bilbao, HiTZ. La búsqueda cubre el nombre y la descripción de todas las entradas.
 
 -   :material-plus-box-outline: **[Proponer un proyecto](https://github.com/GeiserX/awesome-euskadi/issues/new?template=anadir-proyecto.md)**
 
