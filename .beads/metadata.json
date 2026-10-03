@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "euskadi",
+  "project_id": "ff93f32b-d668-4629-81d3-a792fed067de"
+}
